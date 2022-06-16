@@ -85,12 +85,12 @@ public class RollingDie {
 
 
 
-        RollingDie[] dice = new RollingDie[5]; // roll dice 5 time
+        RollingDie[] dice = new RollingDie[5]; 
         for (int i = 0; i < dice.length; i++)    
         dice[i] = new RollingDie(6); 
         int rolls = 0;
         do {
-            for (int i = 0; i < dice.length; i++) dice[i].rolling(); 
+            for (int i = 0; i < dice.length; i++) dice[i].rolling();  // loop run untill get 5
 
             rolls += 1;
         } while (dice[0].getFaceofside() != dice[1].getFaceofside() || 
@@ -98,7 +98,7 @@ public class RollingDie {
                 dice[0].getFaceofside() != dice[3].getFaceofside() ||
                 dice[0].getFaceofside() != dice[4].getFaceofside()
         );
-        System.out.println("Bonus Found 5 :-" + rolls); // get the total after roll 5 time
+        System.out.println("Bonus Found 5 :-" + rolls); // get the total after roll untill get 5
 
     }
 }
